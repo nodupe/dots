@@ -1,8 +1,8 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
-encryption = "age"
-[age]
-  identity = "~/key.txt"
-  recipient = "age15qc3jhv965sx4nvrr2ng0sfk5mn4f4ehehhndx2al77mlfdd4dsshwanuc"
 [data]
   email = {{ $email | quote }}
 
+encryption = "age"
+[age]
+    identity = "~/key.txt"
+    recipient = "age15qc3jhv965sx4nvrr2ng0sfk5mn4f4ehehhndx2al77mlfdd4dsshwanuc"
