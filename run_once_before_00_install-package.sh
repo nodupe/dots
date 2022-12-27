@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eu
-export PATH="${HOME}/.bin:${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/.bin:${HOME}/.local/bin:${HOME}/bin:${PATH}"
+
+echo 'PATH="${HOME}/.bin:${HOME}/.local/bin:${HOME}/bin:${PATH}"' >> ${HOME}/.bashrc
+
 
 if [ "${CHEZMOI_OS}" == "linux" ]; then
 # Install age if it's not already installed
