@@ -5,7 +5,7 @@ export PATH="${HOME}/.bin:${HOME}/.local/bin:${HOME}/bin:${PATH}"
 echo 'PATH="${HOME}/.bin:${HOME}/.local/bin:${HOME}/bin:${PATH}"' >> ${HOME}/.bashrc
 
 
-if [ "${CHEZMOI_OSRELEASE_ID}" == "debian" ]; then
+if [ "${CHEZMOI_OS}" == "debian" ]; then
 # Install age if it's not already installed
   if ! command -v age >/dev/null; then
    {{ if eq .chezmoi.os "darwin" }}
